@@ -10,7 +10,7 @@ const mongoose = require("./db/mongoose");
 //const mongoose= require("mongoose");
 
 const TodoTask = require("./models/toDoTask");
-const port = process.env.PORT || 3000
+//const port = process.env.PORT || 3000
 
 var cors = require('cors');
 
