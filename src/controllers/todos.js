@@ -1,4 +1,4 @@
-const Todo = require('../models/todo.js')
+const Todo = require('../models/todo')
 
 const getTodos = function(req, res) {
   // solo podemos hacer GET de los todos del usuario que hizo login
