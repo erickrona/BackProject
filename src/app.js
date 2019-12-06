@@ -35,7 +35,7 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
 	})
 }); */
 
-app.set("view engine", "ejs");
+//app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
 	TodoTask.find({}, (err, tasks) => {
