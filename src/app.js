@@ -66,9 +66,9 @@ app.post('/',async (req, res) => {
 	});
 	try {
 		await todoTask.save();
-		res.redirect("/todo");
+		res.redirect("/");
 	} catch (err) {
-		res.redirect("/todo");
+		res.redirect("/");
 	}
 });
 
@@ -84,7 +84,7 @@ app
 		const id = req.params.id;
 		TodoTask.findByIdAndUpdate(id, { content: req.body.content }, err => {
 			if (err) return res.send(500, err);
-			res.redirect("/todo");
+			res.redirect("/");
 		});
 	});
 
