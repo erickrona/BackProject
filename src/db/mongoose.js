@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose')
 
-//const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 const dotenv = require("dotenv");
 const express = require('express');
 const app = express();
@@ -25,9 +25,9 @@ mongoose.connect( connectionURL, {
   useUnifiedTopology: true
 }).then(function(){
 	console.log("Conexion DB exitosa")
-	/*app.listen(port, function() {
+	app.listen(port, function() {
   		console.log('Server Up and running!')
-	})*/
+	})
 }).catch(function(){
 	console.log("Conexion DB fallida")
 })
