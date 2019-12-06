@@ -35,8 +35,10 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
 	})
 }); */
 
+
 //app.set("view engine", "ejs");
 
+/*
 app.get("/", (req, res) => {
 	TodoTask.find({}, (err, tasks) => {
 		//res.render("index.ejs");
@@ -50,7 +52,7 @@ app.get("/signup", (req, res) => {
 		res.render("signup.html");
 	});
 });
-
+*/
 
 app.get("/todo", (req, res) => {
 	TodoTask.find({}, (err, tasks) => {
@@ -59,7 +61,7 @@ app.get("/todo", (req, res) => {
 });
 
 
-
+/*
 app.post('/',async (req, res) => {
 	const todoTask = new TodoTask({
 		content: req.body.content
@@ -70,7 +72,7 @@ app.post('/',async (req, res) => {
 	} catch (err) {
 		res.redirect("/");
 	}
-});
+}); */
 
 app
 	.route("/edit/:id")
