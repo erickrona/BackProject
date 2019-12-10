@@ -38,25 +38,24 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
 
 //app.set("view engine", "ejs");
 
-
 app.get("/", (req, res) => {
 	TodoTask.find({}, (err, tasks) => {
 		//res.render("index.ejs");
-		res.render("index.html"); //{ todoTasks: tasks });
+		res.render("signin.ejs"); //{ todoTasks: tasks });
 	});
 });
 
 
 app.get("/signup", (req, res) => {
 	TodoTask.find({}, (err, tasks) => {
-		res.render("signup.html");
+		res.render("signup.ejs");
 	});
 });
 
 
 app.get("/todo", (req, res) => {
 	TodoTask.find({}, (err, tasks) => {
-		res.render("todo.html", { todoTasks: tasks });
+		res.render("todo.ejs", { todoTasks: tasks });
 	});
 });
 
@@ -68,25 +67,25 @@ app.post('/',async (req, res) => {
 	});
 	try {
 		await todoTask.save();
-		res.redirect("/");
+		res.redirect("/todo");
 	} catch (err) {
-		res.redirect("/");
+		res.redirect("/todo");
 	}
-}); 
+});
 
 app
 	.route("/edit/:id")
 	.get((req, res) => {
 	const id = req.params.id;
 	TodoTask.find({}, (err, tasks) => {
-		res.render("toDoUpdate.html", { todoTasks: tasks, idTask: id });
+		res.render("toDoUpdate.ejs", { todoTasks: tasks, idTask: id });
 		});
 	})
 	.post((req, res) => {
 		const id = req.params.id;
 		TodoTask.findByIdAndUpdate(id, { content: req.body.content }, err => {
 			if (err) return res.send(500, err);
-			res.redirect("/");
+			res.redirect("/todo");
 		});
 	});
 
