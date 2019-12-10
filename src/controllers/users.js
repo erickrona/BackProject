@@ -1,4 +1,4 @@
-const User = require('../models/user')
+const User = require('../models/user.js')
 
 // GET USERS ya no esta en routes.js ya que un usuario no debería tener acceso
 // a la informacion de TODOS los usuarios a menos que sea administrador

@@ -1,12 +1,12 @@
 {
-  "name": "mongo",
+  "name": "finalproject",
   "version": "1.0.0",
-  "main": "mongo.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "start": "node ./src/app.js"
   },
-  "keywords": [],
-  "author": "Erick Rodriguez",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -16,13 +16,12 @@
     "express": "^4.17.1",
     "heroku": "^7.35.0",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.2.2",
+    "mongodb": "^3.3.5",
     "mongoose": "^5.7.13",
     "request": "^2.88.0",
-    "validator": "^10.11.0"
+    "validator": "^12.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.1"
-  },
-  "description": ""
+  }
 }

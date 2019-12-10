@@ -4,7 +4,7 @@ const router = express.Router()
 
 const users = require('./controllers/users.js')
 const todos = require('./controllers/todos.js')
-const auth = require('./middleware/auth')
+const auth = require('./middleware/auth.js')
 
 router.get('/users', auth, users.getUser)
 router.post('/login', users.login)
